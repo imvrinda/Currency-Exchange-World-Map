@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <title>Currency Exchange World Map</title>
+</head>
+<body>
+  <header>
+    <div class="container col-12 my-3">
+      <div class="row">
+        <h1 class="col-12 text-center currency-font heading">Currency Exchange World Map</h1>
+      </div>
+    </div>
+  </header>
+  <main class="container col-12">
+    <div class="row">
+      <div class="col-12 col-xl-9 map visualization" id="regions_div"></div>
+      <div class="col-12 col-xl-3">
+        <h4 class="m-0"><span class="badge badge-primary">1</span><span class="badge badge-secondary">USD (US Dollar)</span></h4>
+        <h1 class="m-0">=</h1>
+        <h4 class="mb-4"><span id="exchange-amount" class="badge badge-primary">Amount</span><span id="exchange-currency" class="badge badge-secondary">Exchange Currency</span></h4>
+        <form>
+          <div class="form-row mb-2">
+            <div class="col">
+              <input type="number" id="base-input" class="form-control" placeholder="Enter amount">
+            </div>
+            <div class="col">
+              <select class="form-control">
+                <option value="USD">USD (US Dollar)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row mb-2">
+            <div class="col">
+              <input type="number" id="exchange-input" class="form-control" placeholder="Enter amount">
+            </div>
+            <div class="col">
+              <select id="exchange-select-form" class="form-control">
+                <option value="default">Select exchange currency</option>
+                <option id="option2-jpn" class="option2" value="JPY">JPY (Japanese Yen)</option>
+                <option id="option2-gbr" class="option2" value="GBP">GBP (British Pound)</option>
+                <option id="option2-aus" class="option2" value="AUD">AUD (Australian Dollar)</option>
+                <option id="option2-can" class="option2" value="CAD">CAD (Canadian Dollar)</option>
+                <option id="option2-chn" class="option2" value="CNY">CNY (Chinese Renminbi)</option>
+                <option id="option2-rus" class="option2" value="RUB">RUB (Russian Ruble)</option>
+                <option id="option2-ind" class="option2" value="INR">INR (Indian Rupee)</option>
+                <option id="option2-bra" class="option2" value="BRL">BRL (Brazilian Real)</option>
+                <option id="option2-phl" class="option2" value="PHP">PHP (Philippine Peso)</option>
+                <option id="option2-mex" class="option2" value="MXN">MXN (Mexican Peso)</option>
+                <option id="option2-swe" class="option2" value="SEK">SEK (Swedish Krona)</option>
+                <option id="option2-esp" class="option2" value="EUR">EUR (Euro)-Spain</option>
+                <option id="option2-fra" class="option2" value="EUR">EUR (Euro)-France</option>
+                <option id="option2-ita" class="option2" value="EUR">EUR (Euro)-Italy</option>
+                <option id="option2-deu" class="option2" value="EUR">EUR (Euro)-Germany</option>
+                <option id="option2-grc" class="option2" value="EUR">EUR (Euro)-Greece</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row mb-3">
+            <div class="col">
+              <input type="reset" id="reset-button" class="form-control btn btn-danger">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+  <div class="modal-overlay">
+    <div class="modal-content p-4">
+      <p>Please note that this website is only a demo and not fully up-to-scale to support all countries and currencies in the world. Only the countries colored in <span class="green-text">green</span> are selectable.</p>
+      <button type="button" id="continue-button" class="btn btn-warning w-100">Continue</button>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript" src="assets/js/geochart.js"></script>
+  <script src="assets/js/currency-form.js"></script>
+</body>
+</html>
